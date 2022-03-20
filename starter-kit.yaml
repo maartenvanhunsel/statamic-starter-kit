@@ -1,0 +1,19 @@
+export_paths:
+  - .env.example
+  - config/statamic/git.php
+  - config/statamic/api.php
+  - config/statamic/editions.php
+  - app/Providers/AppServiceProvider.php
+  - app/CustomEntry.php
+  - app/CustomAsset.php
+  - resources/blueprints
+  - resources/fieldsets
+  - content/globals
+  - content/navigation
+  - content/collections
+  - content/trees
+  - config/duplicator.php
+  - config/font-awesome.php
+dependencies:
+  aerni/font-awesome: ^1.2
+  doublethreedigital/duplicator: ^2.1

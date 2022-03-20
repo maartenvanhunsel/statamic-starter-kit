@@ -1,0 +1,39 @@
+title: 'Blok: tekst <> afbeelding'
+fields:
+  -
+    handle: columns
+    field:
+      collapse: false
+      sets:
+        text:
+          display: Tekst
+          fields:
+            -
+              import: helper_title
+            -
+              import: helper_content
+        image:
+          display: Afbeelding
+          fields:
+            -
+              handle: images
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 2
+                display: Afbeelding(en)
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+      display: 'Tekst <> afbeelding'
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      max_sets: 2
+  -
+    import: helper_block_options

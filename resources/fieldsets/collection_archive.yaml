@@ -1,0 +1,47 @@
+title: 'Blok: collectie overzicht'
+fields:
+  -
+    handle: section_collection
+    field:
+      display: 'Collectie overzicht'
+      type: section
+      icon: section
+      instructions: 'Kies een collectie om een overzichtspagina te genereren.'
+      listable: hidden
+      instructions_position: above
+  -
+    handle: collection
+    field:
+      max_items: 1
+      mode: default
+      display: Collectie
+      type: collections
+      icon: collections
+      listable: hidden
+      instructions_position: above
+  -
+    handle: sort_by
+    field:
+      options:
+        date: Datum
+        order: 'Order (volgorde)'
+      default: date
+      display: Sorteren
+      type: button_group
+      icon: button_group
+      width: 50
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: limit
+    field:
+      display: 'Max. aantal entries'
+      type: integer
+      icon: integer
+      width: 50
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    import: helper_block_options

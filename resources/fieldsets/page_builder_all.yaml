@@ -1,0 +1,24 @@
+title: 'Page builder: alle blokken'
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: accordion
+      sets:
+        text_image:
+          display: 'Tekst <> afbeelding'
+          fields:
+            -
+              import: text_image
+        collection_archive:
+          display: 'Collectie overzicht (archive)'
+          fields:
+            -
+              import: collection_archive
+      display: Blokken
+      type: replicator
+      icon: replicator
+      instructions: 'Per pagina is het mogelijk om verschillende blokken te selecteren.'
+      listable: hidden
+      instructions_position: above
+      read_only: false

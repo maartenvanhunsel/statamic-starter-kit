@@ -1,0 +1,40 @@
+title: Home
+sections:
+  main:
+    display: Main
+    fields:
+      - handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      - handle: blocks
+        field:
+          collapse: accordion
+          sets:
+            text_image:
+              display: "Tekst <> afbeelding"
+              fields:
+                - import: text_image
+          display: Blokken
+          type: replicator
+          icon: replicator
+          instructions: "Per pagina is het mogelijk om verschillende blokken te selecteren."
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      - handle: slug
+        field:
+          type: slug
+          localizable: true
+      - handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

@@ -1,0 +1,109 @@
+title: "Helper: blok opties"
+fields:
+  - handle: section_block_options
+    field:
+      display: "Blok opties"
+      type: section
+      icon: section
+      instructions: "Per blok is het mogelijk om een extra opties toe te voegen zoals: **thema**, **tussenruimte** en **anchor linkjes**."
+      listable: hidden
+      instructions_position: above
+  - handle: show_settings
+    field:
+      display: "Toon instellingen"
+      type: revealer
+      icon: revealer
+      listable: hidden
+      instructions_position: above
+  - handle: theme
+    field:
+      options:
+        light: Licht
+        dark: Donker
+      default: light
+      display: Thema
+      type: button_group
+      icon: button_group
+      instructions: "**Let op:** niet ieder blok is beschikbaar in meerdere thema's."
+      listable: hidden
+      instructions_position: below
+      width: 50
+      if:
+        show_settings: "equals true"
+  - handle: background
+    field:
+      options:
+        none: Automatisch
+        white: Wit
+        black: Zwart
+        image: Afbeelding
+      default: none
+      display: Achtergrond
+      type: button_group
+      icon: button_group
+      width: 50
+      listable: hidden
+      instructions_position: above
+      if:
+        show_settings: "equals true"
+  - handle: background_image
+    field:
+      mode: list
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: "Achtergrond afbeelding"
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      if:
+        show_settings: "equals true"
+        background: "equals image"
+      max_files: 1
+  - handle: padding_top
+    field:
+      options:
+        none: Geen
+        small: Weinig
+        medium: Normaal
+        large: Veel
+      default: medium
+      display: "Tussentruimte - boven"
+      type: button_group
+      icon: button_group
+      width: 50
+      listable: hidden
+      instructions_position: above
+      if:
+        show_settings: "equals true"
+  - handle: padding_bottom
+    field:
+      options:
+        none: Geen
+        small: Weinig
+        medium: Normaal
+        large: Veel
+      default: medium
+      display: "Tussentruimte - onder"
+      type: button_group
+      icon: button_group
+      width: 50
+      listable: hidden
+      instructions_position: above
+      if:
+        show_settings: "equals true"
+  - handle: anchor
+    field:
+      input_type: text
+      prepend: "#"
+      antlers: false
+      display: "Anchor link"
+      type: text
+      icon: text
+      instructions: "Voeg #naam toe aan een link om naar dit blok te scrollen."
+      width: 50
+      listable: hidden
+      instructions_position: above
+      if:
+        show_settings: "equals true"

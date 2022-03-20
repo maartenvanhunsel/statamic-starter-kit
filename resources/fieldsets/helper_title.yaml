@@ -1,0 +1,25 @@
+title: 'Helper: titel'
+fields:
+  -
+    handle: title
+    field:
+      always_show_set_button: false
+      buttons:
+        - bold
+      save_html: true
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: false
+      allow_source: false
+      enable_input_rules: false
+      enable_paste_rules: false
+      antlers: false
+      display: Titel
+      type: bard
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      read_only: false
