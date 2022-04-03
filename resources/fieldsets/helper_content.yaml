@@ -126,3 +126,5 @@ fields:
                 icon: replicator
                 listable: hidden
                 instructions_position: above
+      read_only: false
+      container: assets

@@ -15,6 +15,11 @@ fields:
           fields:
             -
               import: collection_archive
+        form:
+          display: Formulier
+          fields:
+            -
+              import: form
       display: Blokken
       type: replicator
       icon: replicator

@@ -1,0 +1,25 @@
+title: 'Helper: formulier'
+fields:
+  -
+    handle: form
+    field:
+      max_items: 1
+      display: Formulier
+      type: form
+      icon: form
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: submit_button
+    field:
+      input_type: text
+      antlers: false
+      default: Versturen
+      display: 'Versturen knop tekst'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      read_only: false
