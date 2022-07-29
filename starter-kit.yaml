@@ -10,6 +10,7 @@ export_paths:
   - app/CustomAsset.php
   - resources/blueprints/collections/pages
   - resources/fieldsets
+  - resources/views
   - content/globals
   - content/navigation
   - content/collections/pages
