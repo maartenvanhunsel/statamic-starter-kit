@@ -1,0 +1,19 @@
+{
+    "name": "ptchr/netlify",
+    "autoload": {
+        "psr-4": {
+            "Ptchr\\Netlify\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Netlify",
+            "description": "Netlify addon"
+        },
+        "laravel": {
+            "providers": [
+                "Ptchr\\Netlify\\ServiceProvider"
+            ]
+        }
+    }
+}
