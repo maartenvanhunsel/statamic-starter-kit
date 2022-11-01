@@ -1,9 +1,9 @@
 export_paths:
-  - .env
   - .env.example
   - config/statamic/git.php
   - config/statamic/api.php
   - config/statamic/editions.php
+  - config/statamic/sites.php
   - app/Providers/AppServiceProvider.php
   - app/Providers/StatamicServiceProvider.php
   - app/CustomEntry.php

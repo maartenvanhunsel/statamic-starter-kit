@@ -69,7 +69,7 @@ typings/
 .nuxt
 
 # Nuxt generate
-dist
+# dist
 
 # Serverless directories
 .serverless
@@ -88,3 +88,5 @@ sw.*
 
 # Local Netlify folder
 .netlify
+
+vendor
