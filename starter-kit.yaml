@@ -12,16 +12,16 @@ export_paths:
   - resources/fieldsets
   - resources/views
   - content/globals
-  - content/navigation
+  - content/navigation/main.yaml
   - content/collections/pages
   - content/collections/pages.yaml
   - content/trees/collections/pages.yaml
-  - content/trees/navigation
+  - content/trees/navigation//main.yaml
   - content/assets
   - addons
   - config/duplicator.php
   - config/font-awesome.php
 dependencies:
   aerni/font-awesome: ^1.2
-  doublethreedigital/duplicator: ^2.1
+  doublethreedigital/duplicator: ^2.3.1
   jacksleight/statamic-bard-mutator: ^1.1
