@@ -10,20 +10,22 @@ fields:
           fields:
             -
               import: text_image
-        collection_archive:
-          display: 'Collectie overzicht (archive)'
-          fields:
-            -
-              import: collection_archive
         form:
           display: Formulier
           fields:
             -
               import: form
+        collection_demo:
+          display: 'Collectie - demo'
+          fields:
+            -
+              import: helper_collection
       display: Blokken
       type: replicator
       icon: replicator
       instructions: 'Per pagina is het mogelijk om verschillende blokken te selecteren.'
       listable: hidden
       instructions_position: above
-      read_only: false
+      visibility: visible
+      always_save: false
+      previews: true

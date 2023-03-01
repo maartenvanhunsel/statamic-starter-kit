@@ -1,0 +1,203 @@
+title: 'Helper: collectie'
+fields:
+  -
+    handle: section_collection
+    field:
+      display: 'Collectie overzicht'
+      type: section
+      icon: section
+      instructions: 'Kies een collectie om een overzicht, laatste posts, of relevante artikelen te genereren.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: collection_type
+    field:
+      options:
+        overview: Overzicht
+        featured: Uitgelicht
+        related: Gerelateerd
+      default: overview
+      display: Type
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      width: 50
+  -
+    handle: limit
+    field:
+      display: 'Max. aantal entries'
+      type: integer
+      icon: integer
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if_any:
+        collection_type: 'contains_any overview,related'
+      default: '3'
+  -
+    handle: collection
+    field:
+      max_items: 1
+      mode: default
+      display: Collectie
+      type: collections
+      icon: collections
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        collection_type: 'equals overview'
+  -
+    handle: entries
+    field:
+      mode: default
+      create: true
+      display: Entries
+      type: entries
+      icon: entries
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        collection_type: 'equals featured'
+  -
+    handle: sort
+    field:
+      options:
+        '-date': 'Datum (nieuwste)'
+        order: 'Order (volgorde)'
+        custom: Anders
+      display: Sorteren
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      default: '-date'
+      if:
+        collection_type: 'equals overview'
+  -
+    handle: custom_sort
+    field:
+      input_type: text
+      antlers: false
+      display: Anders
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      always_save: false
+      instructions: 'Voor meer informatie: https://statamic.dev/rest-api#sorting'
+      if:
+        sort: 'equals custom'
+        collection_type: 'equals overview'
+  -
+    handle: section_filter
+    field:
+      display: Filteren
+      type: section
+      icon: section
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        collection_type: 'equals overview'
+      instructions: 'Filters zorgen ervoor dat gebruikers kunnen filteren op o.a. categorieën.'
+  -
+    handle: show_filters
+    field:
+      default: false
+      display: 'Toon filters'
+      type: toggle
+      icon: toggle
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        collection_type: 'equals overview'
+  -
+    handle: filters
+    field:
+      mode: select
+      display: Filters
+      type: taxonomies
+      icon: taxonomy
+      width: 66
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        show_filters: 'equals true'
+        collection_type: 'equals overview'
+  -
+    handle: section_footer
+    field:
+      display: Footer
+      type: section
+      icon: section
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: footer_type
+    field:
+      options:
+        none: Geen
+        button: 'Toon knop naar overzicht'
+        pagination: Paginatie
+      default: none
+      display: Footer
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        collection_type: 'equals overview'
+  -
+    handle: overview_page_url
+    field:
+      display: Overzichtspagina
+      type: link
+      icon: link
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if_any:
+        footer_type: 'equals button'
+        collection_type: '!== overview'
+  -
+    handle: overview_page_text
+    field:
+      input_type: text
+      antlers: false
+      display: 'Knop tekst'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if_any:
+        footer_type: 'equals button'
+        collection_type: '!== overview'

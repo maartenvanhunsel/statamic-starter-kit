@@ -20,6 +20,3 @@ export_paths:
   - content/assets
   - addons
   - config/font-awesome.php
-dependencies:
-  aerni/font-awesome: ^1.2
-  jacksleight/statamic-bard-mutator: ^1.1
