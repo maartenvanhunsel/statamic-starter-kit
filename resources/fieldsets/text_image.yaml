@@ -5,35 +5,48 @@ fields:
     field:
       collapse: false
       sets:
-        text:
-          display: Tekst
-          fields:
-            -
-              import: helper_title
-            -
-              import: helper_content
-        image:
-          display: Afbeelding
-          fields:
-            -
-              handle: images
-              field:
-                mode: list
-                container: assets
-                restrict: false
-                allow_uploads: true
-                show_filename: true
-                max_files: 2
-                display: Afbeelding(en)
-                type: assets
-                icon: assets
-                listable: hidden
-                instructions_position: above
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            text:
+              display: Tekst
+              instructions: null
+              icon: text-formatting-all-caps
+              fields:
+                -
+                  import: helper_title
+                -
+                  import: helper_content
+            image:
+              display: Afbeelding
+              instructions: null
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  handle: images
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 2
+                    display: Afbeelding(en)
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
       display: 'Tekst <> afbeelding'
       type: replicator
       icon: replicator
       listable: hidden
       instructions_position: above
       max_sets: 2
+      visibility: visible
+      previews: true
+      fullscreen: true
+      hide_display: false
   -
     import: helper_block_options

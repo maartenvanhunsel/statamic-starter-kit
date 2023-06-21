@@ -27,104 +27,119 @@ fields:
       listable: hidden
       instructions_position: above
       sets:
-        buttons:
-          display: Buttons
-          fields:
-            -
-              handle: buttons
-              field:
-                collapse: false
-                sets:
-                  button:
-                    display: Button
-                    fields:
-                      -
-                        handle: label
-                        field:
-                          input_type: text
-                          antlers: false
-                          display: Label
-                          type: text
-                          icon: text
-                          listable: hidden
-                          instructions_position: above
-                      -
-                        handle: url
-                        field:
-                          display: Url
-                          type: link
-                          icon: link
-                          listable: hidden
-                          instructions_position: above
-                      -
-                        handle: show_styling
-                        field:
-                          display: 'Toon stijl'
-                          type: revealer
-                          icon: revealer
-                          listable: hidden
-                          instructions_position: above
-                      -
-                        handle: button_type
-                        field:
-                          options:
-                            button: Knop
-                            link: Link
-                          default: button
-                          display: Type
-                          type: button_group
-                          icon: button_group
-                          listable: hidden
-                          instructions_position: above
-                          width: 50
-                          if:
-                            show_styling: 'equals true'
-                      -
-                        handle: variant
-                        field:
-                          options:
-                            filled: Gevuld
-                            outline: Uitlijning
-                          default: filled
-                          display: Variant
-                          type: button_group
-                          icon: button_group
-                          width: 50
-                          listable: hidden
-                          instructions_position: above
-                          if:
-                            show_styling: 'equals true'
-                            button_type: 'equals button'
-                display: Buttons
-                type: replicator
-                icon: replicator
-                listable: hidden
-                instructions_position: above
-        usps:
-          display: Usps
-          fields:
-            -
-              handle: usps
-              field:
-                collapse: true
-                sets:
-                  usp:
-                    display: Usp
-                    fields:
-                      -
-                        handle: text
-                        field:
-                          input_type: text
-                          antlers: false
-                          display: Tekst
-                          type: text
-                          icon: text
-                          listable: hidden
-                          instructions_position: above
-                display: Usps
-                type: replicator
-                icon: replicator
-                listable: hidden
-                instructions_position: above
-      read_only: false
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            buttons:
+              display: Buttons
+              instructions: null
+              icon: link
+              fields:
+                -
+                  handle: buttons
+                  field:
+                    collapse: false
+                    sets:
+                      button:
+                        display: Button
+                        fields:
+                          -
+                            handle: label
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Label
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: url
+                            field:
+                              display: Url
+                              type: link
+                              icon: link
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: show_styling
+                            field:
+                              display: 'Toon stijl'
+                              type: revealer
+                              icon: revealer
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: button_type
+                            field:
+                              options:
+                                button: Knop
+                                link: Link
+                              default: button
+                              display: Type
+                              type: button_group
+                              icon: button_group
+                              listable: hidden
+                              instructions_position: above
+                              width: 50
+                              if:
+                                show_styling: 'equals true'
+                          -
+                            handle: variant
+                            field:
+                              options:
+                                filled: Gevuld
+                                outline: Uitlijning
+                              default: filled
+                              display: Variant
+                              type: button_group
+                              icon: button_group
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                              if:
+                                show_styling: 'equals true'
+                                button_type: 'equals button'
+                    display: Buttons
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+            usps:
+              display: Usps
+              instructions: null
+              icon: layout-three-columns
+              fields:
+                -
+                  handle: usps
+                  field:
+                    collapse: true
+                    sets:
+                      usp:
+                        display: Usp
+                        fields:
+                          -
+                            handle: text
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Tekst
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                    display: Usps
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
       container: assets
+      visibility: visible
+      smart_typography: false
+      inline: false
+      remove_empty_nodes: false
+      collapse: false
+      previews: true
+      hide_display: false

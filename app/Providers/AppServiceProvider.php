@@ -19,16 +19,10 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
-        $this->app->bind(
-            Asset::class,
-            CustomAsset::class
-        );
-        $this->app->bind(
-            Entry::class,
-            CustomEntry::class
-        );
+        $this->app->bind(Asset::class,CustomAsset::class);
+        $this->app->bind(Entry::class,CustomEntry::class);
     }
 
     /**
@@ -36,9 +30,11 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
-        // Statamic::script('app', 'cp');
-        // Statamic::style('app', 'cp');
+        Statamic::vite('app', [
+            'resources/js/cp.js',
+            'resources/css/cp.css'
+        ]);
     }
 }

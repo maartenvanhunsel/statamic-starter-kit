@@ -1,31 +1,48 @@
 title: Pagina
-sections:
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
       -
-        import: page_builder_all
+        display: 'Pagina content'
+        instructions: 'Voeg blokken toe om de pagina op te bouwen.'
+        fields:
+          -
+            import: page_builder_all
+  seo:
+    display: SEO
+    sections:
+      -
+        display: SEO
+        instructions: 'Per pagina SEO configuratie'
+        fields:
+          -
+            import: module_seo
   sidebar:
     display: Sidebar
-    fields:
+    sections:
       -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
-      -
-        handle: parent
-        field:
-          type: entries
-          collections:
-            - pages
-          max_items: 1
-          listable: false
-          localizable: true
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

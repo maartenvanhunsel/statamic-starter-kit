@@ -15,10 +15,14 @@ return [
     |
     */
 
-    'enabled' => env('STATAMIC_API_ENABLED', true),
+    'enabled' => env('STATAMIC_API_ENABLED', false),
 
     'resources' => [
-        'collections' => true,
+        'collections' => [
+            'pages' => [
+                // 'allowed_filters' => ['title']
+            ],
+        ],
         'navs' => true,
         'taxonomies' => true,
         'assets' => false,

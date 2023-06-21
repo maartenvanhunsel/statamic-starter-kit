@@ -1,0 +1,150 @@
+title: 'Module: SEO'
+fields:
+  -
+    handle: seo_title
+    field:
+      input_type: text
+      antlers: false
+      display: Titel
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: seo_description
+    field:
+      character_limit: '160'
+      antlers: false
+      display: Omschrijving
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: seo_noindex
+    field:
+      default: false
+      display: 'Deze pagina niet indexeren?'
+      type: toggle
+      icon: toggle
+      instructions: 'Hiermee kan je een no-index meta tag toevoegen op deze pagina, zodat Google hem niet zal indexeren.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: socials_section
+    field:
+      display: 'Socials - open graph'
+      type: section
+      icon: section
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: seo_open_graph_title_type
+    field:
+      options:
+        same: 'Pagina titel'
+        custom: Anders
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: same
+      display: Titel
+      type: select
+      icon: select
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: seo_open_graph_description_type
+    field:
+      options:
+        same: 'Pagina omschrijving'
+        custom: Anders
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: same
+      display: Omschrijving
+      type: select
+      icon: select
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: seo_open_graph_image_type
+    field:
+      options:
+        same: Standaard
+        custom: Anders
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: same
+      display: Afbeelding
+      type: select
+      icon: select
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: seo_open_graph_title
+    field:
+      input_type: text
+      antlers: false
+      display: Titel
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        seo_open_graph_title_type: 'equals custom'
+  -
+    handle: seo_open_graph_description
+    field:
+      character_limit: '160'
+      antlers: false
+      display: Omschrijving
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        seo_open_graph_description_type: 'equals custom'
+  -
+    handle: seo_open_graph_image
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: Afbeelding
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - image
+      if:
+        seo_open_graph_image_type: 'equals custom'

@@ -1,16 +1,16 @@
 export_paths:
   - .env.example
-  - config/statamic/git.php
   - config/statamic/api.php
+  - config/statamic/assets.php
   - config/statamic/editions.php
+  - config/statamic/git.php
   - config/statamic/sites.php
   - app/Providers/AppServiceProvider.php
-  - app/Providers/StatamicServiceProvider.php
   - app/CustomEntry.php
   - app/CustomAsset.php
   - resources/blueprints/collections/pages
+  - resources/blueprints/globals
   - resources/fieldsets
-  - resources/views
   - content/globals
   - content/navigation/main.yaml
   - content/collections/pages
@@ -18,4 +18,4 @@ export_paths:
   - content/trees/collections/pages.yaml
   - content/trees/navigation/main.yaml
   - content/assets
-  - addons
+  - vite.config.js

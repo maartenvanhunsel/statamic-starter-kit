@@ -5,27 +5,44 @@ fields:
     field:
       collapse: accordion
       sets:
-        text_image:
-          display: 'Tekst <> afbeelding'
-          fields:
-            -
-              import: text_image
-        form:
-          display: Formulier
-          fields:
-            -
-              import: form
-        collection_demo:
-          display: 'Collectie - demo'
-          fields:
-            -
-              import: helper_collection
+        main_group:
+          display: Algemeen
+          instructions: null
+          icon: programming-module-box-cube
+          sets:
+            form:
+              display: Formulier
+              instructions: null
+              icon: form-text-field
+              fields:
+                -
+                  import: form
+            collection_demo:
+              display: 'Collectie - demo'
+              instructions: null
+              icon: layout-grid-dots
+              fields:
+                -
+                  import: helper_collection
+        text_content_group:
+          display: 'Tekst & content'
+          instructions: null
+          icon: form-text-field
+          sets:
+            text_image:
+              display: 'Tekst <> afbeelding'
+              instructions: null
+              icon: text-formatting-wrap-image-left
+              fields:
+                -
+                  import: text_image
       display: Blokken
       type: replicator
       icon: replicator
-      instructions: 'Per pagina is het mogelijk om verschillende blokken te selecteren.'
       listable: hidden
       instructions_position: above
       visibility: visible
       always_save: false
       previews: true
+      fullscreen: true
+      hide_display: false

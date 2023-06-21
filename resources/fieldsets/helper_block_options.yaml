@@ -1,67 +1,63 @@
-title: "Helper: blok opties"
+title: 'Helper: blok opties'
 fields:
-  - handle: section_block_options
+  -
+    handle: section_block_options
     field:
-      display: "Blok opties"
+      display: 'Blok opties'
       type: section
       icon: section
-      instructions: "Per blok is het mogelijk om een extra opties toe te voegen zoals: **thema**, **tussenruimte** en **anchor linkjes**."
+      instructions: 'Per blok is het mogelijk om een extra opties toe te voegen zoals: **thema**, **tussenruimte** en **anchor linkjes**.'
       listable: hidden
       instructions_position: above
-  - handle: show_settings
+  -
+    handle: show_settings
     field:
-      display: "Toon instellingen"
+      display: 'Toon instellingen'
       type: revealer
       icon: revealer
       listable: hidden
       instructions_position: above
-  - handle: theme
+  -
+    handle: background_color
     field:
       options:
-        light: Licht
-        dark: Donker
-      default: light
-      display: Thema
-      type: button_group
-      icon: button_group
-      instructions: "**Let op:** niet ieder blok is beschikbaar in meerdere thema's."
-      listable: hidden
-      instructions_position: below
-      width: 50
-      if:
-        show_settings: "equals true"
-  - handle: background
-    field:
-      options:
-        none: Automatisch
         white: Wit
         black: Zwart
-        image: Afbeelding
-      default: none
-      display: Achtergrond
-      type: button_group
-      icon: button_group
+      multiple: false
+      clearable: true
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: 'Achtergrond - kleur'
+      type: select
+      icon: select
       width: 50
       listable: hidden
       instructions_position: above
+      visibility: visible
       if:
-        show_settings: "equals true"
-  - handle: background_image
+        show_settings: 'equals true'
+  -
+    handle: background_image
     field:
       mode: list
       restrict: false
       allow_uploads: true
       show_filename: true
-      display: "Achtergrond afbeelding"
+      display: 'Achtergrond - afbeelding'
       type: assets
       icon: assets
       listable: hidden
       instructions_position: above
-      if:
-        show_settings: "equals true"
-        background: "equals image"
       max_files: 1
-  - handle: padding_top
+      width: 50
+      visibility: visible
+      container: assets
+      if:
+        show_settings: 'equals true'
+  -
+    handle: padding_top
     field:
       options:
         none: Geen
@@ -69,15 +65,16 @@ fields:
         medium: Normaal
         large: Veel
       default: medium
-      display: "Tussentruimte - boven"
+      display: 'Tussentruimte - boven'
       type: button_group
       icon: button_group
       width: 50
       listable: hidden
       instructions_position: above
       if:
-        show_settings: "equals true"
-  - handle: padding_bottom
+        show_settings: 'equals true'
+  -
+    handle: padding_bottom
     field:
       options:
         none: Geen
@@ -85,25 +82,26 @@ fields:
         medium: Normaal
         large: Veel
       default: medium
-      display: "Tussentruimte - onder"
+      display: 'Tussentruimte - onder'
       type: button_group
       icon: button_group
       width: 50
       listable: hidden
       instructions_position: above
       if:
-        show_settings: "equals true"
-  - handle: anchor
+        show_settings: 'equals true'
+  -
+    handle: anchor
     field:
       input_type: text
-      prepend: "#"
+      prepend: '#'
       antlers: false
-      display: "Anchor link"
+      display: 'Anchor link'
       type: text
       icon: text
-      instructions: "Voeg #naam toe aan een link om naar dit blok te scrollen."
+      instructions: 'Voeg #naam toe aan een link om naar dit blok te scrollen.'
       width: 50
       listable: hidden
       instructions_position: above
       if:
-        show_settings: "equals true"
+        show_settings: 'equals true'
