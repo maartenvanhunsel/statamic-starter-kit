@@ -19,9 +19,13 @@ return [
 
     'resources' => [
         'collections' => [
+            '*' => [
+                'allowed_filters' => ['uri', 'date'], // Enabled for all collections
+            ],
             'pages' => [
                 // 'allowed_filters' => ['title']
             ],
+            'demo' => true // Delete me when customizing.
         ],
         'navs' => true,
         'taxonomies' => true,

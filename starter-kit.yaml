@@ -1,5 +1,6 @@
 export_paths:
   - .env.example
+  - config/app.php
   - config/statamic/api.php
   - config/statamic/assets.php
   - config/statamic/editions.php

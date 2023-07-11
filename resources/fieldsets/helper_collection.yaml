@@ -55,6 +55,8 @@ fields:
       always_save: false
       if:
         collection_type: 'equals overview'
+      validate:
+        - required
   -
     handle: entries
     field:
