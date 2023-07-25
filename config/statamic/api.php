@@ -25,7 +25,8 @@ return [
             'pages' => [
                 // 'allowed_filters' => ['title']
             ],
-            'demo' => true // Delete me when customizing.
+            'demo' => true, // Delete me when customizing.
+            'demo_blog' => true // Delete me when customizing.
         ],
         'navs' => true,
         'taxonomies' => true,

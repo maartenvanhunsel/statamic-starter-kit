@@ -18,15 +18,6 @@ tabs:
         fields:
           -
             import: page_builder_all
-  seo:
-    display: SEO
-    sections:
-      -
-        display: SEO
-        instructions: 'Per pagina SEO configuratie'
-        fields:
-          -
-            import: module_seo
   sidebar:
     display: Sidebar
     sections:

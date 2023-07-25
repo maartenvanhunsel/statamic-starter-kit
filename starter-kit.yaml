@@ -1,6 +1,5 @@
 export_paths:
   - .env.example
-  - config/app.php
   - config/statamic/api.php
   - config/statamic/assets.php
   - config/statamic/editions.php
@@ -19,4 +18,9 @@ export_paths:
   - content/trees/collections/pages.yaml
   - content/trees/navigation/main.yaml
   - content/assets
+  - config/advanced-seo.php
+  - resources/lang/vendor/advanced-seo
+  - content/seo
   - vite.config.js
+dependencies:
+  aerni/advanced-seo: ^2.1

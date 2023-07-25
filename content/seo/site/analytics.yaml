@@ -1,0 +1,6 @@
+title: Analytics
+data:
+  use_google_tag_manager: false
+  use_cloudflare_web_analytics: false
+  use_fathom: false
+  fathom_spa: false

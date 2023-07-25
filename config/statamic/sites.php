@@ -14,12 +14,10 @@ return [
     */
 
     'sites' => [
-
         'default' => [
             'name' => config('app.name'),
             'locale' => 'nl_NL',
             'url' => env('FRONTEND_URL', '/'),
         ],
-
     ],
 ];
