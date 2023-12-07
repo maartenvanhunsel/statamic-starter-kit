@@ -53,10 +53,12 @@ fields:
       instructions_position: above
       visibility: visible
       always_save: false
-      if:
-        collection_type: 'equals overview'
       validate:
         - required
+        - sometimes
+      hide_display: false
+      if:
+        collection_type: 'equals overview'
   -
     handle: entries
     field:
