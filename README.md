@@ -6,8 +6,8 @@ The Statamic cms template makes it super easy to start a new project with a bung
 
 1. `statamic new {project_name} maartenvanhunsel/statamic-starter-kit`
 2. Add submodule [by instructions](https://gitlab.com/ptchr-projects/statamic-basics).
-3. `php artisan key:generate`
-4. `cp .env.example .env`
+3. `cp .env.example .env`
+4. `php artisan key:generate`
 5. `yarn install && yarn build`
 6. `valet link {project_name}`
 7. Navigate to `http://{project_name}/cp`
