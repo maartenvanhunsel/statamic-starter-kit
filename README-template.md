@@ -4,9 +4,7 @@ Statamic is the flat-first, Laravel + Git powered CMS designed for building beau
 
 # [PROJECT_NAME] - Statamic
 
-## How to install 
-⚡ By that reason this repository will be **our best practice instance** and will be *up-to-date* for creating new projects.
-
+## How to install
 1. `git clone [PROJECT_SSH_URL]`
 2. Init submodules
 ```bash
