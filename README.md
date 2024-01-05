@@ -11,6 +11,13 @@ The Statamic cms template makes it super easy to start a new project with a bung
 5. `yarn install && yarn build`
 6. `valet link {project_name}`
 7. Navigate to `http://{project_name}/cp`
+8. Update README.md and update placeholders with correct values.
+```bash
+cp README-template.md README.md
+# Replace [PROJECT_NAME] and [PROJECT_SSH_URL] with the correct values.
+rm README-template.md
+```
+9. Et voilà.
 
 ## What's inside?
 See [statamic docs](https://nobears.atlassian.net/l/cp/PR0rD2YP) for more information.
