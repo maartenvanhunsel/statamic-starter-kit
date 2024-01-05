@@ -28,6 +28,6 @@ export_paths:
   - config/statamic/redirect.php
   - vite.config.js
 dependencies:
-  aerni/advanced-seo: ^2.3
+  aerni/advanced-seo: ^2.4
   league/flysystem-sftp-v3: ^3.22
-  rias/statamic-redirect: ^3.1
+  rias/statamic-redirect: ^3.4
