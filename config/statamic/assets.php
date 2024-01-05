@@ -98,7 +98,7 @@ return [
         */
 
         'presets' => [
-             'default' => ['w' => 1800, 'h' => 1800, 'q' => 80, 'fit' => 'max'],
+             'default' => ['w' => 1600, 'h' => 1600, 'fit' => 'max'],
         ],
 
         /*

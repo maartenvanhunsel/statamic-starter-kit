@@ -65,6 +65,14 @@ return [
             'throw' => false,
         ],
 
+        'bunnysftp' => [
+            'driver' => 'sftp',
+            'host' => env('SFTP_HOST', 'storage.bunnycdn.com'),
+            'username' => env('BUNNYCDN_SFTP_USERNAME'),
+            'password' => env('BUNNYCDN_SFTP_PASS'),
+            'passive' => true,
+        ],
+
     ],
 
     /*

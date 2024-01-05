@@ -21,7 +21,7 @@ export_paths:
   - content/collections/pages.yaml
   - content/trees/collections/pages.yaml
   - content/trees/navigation/main.yaml
-  - content/assets
+  - content/assets/assets.yaml
   - config/advanced-seo.php
   - resources/lang/vendor/advanced-seo
   - content/seo
@@ -29,4 +29,5 @@ export_paths:
   - vite.config.js
 dependencies:
   aerni/advanced-seo: ^2.3
+  league/flysystem-sftp-v3: ^3.22
   rias/statamic-redirect: ^3.1
