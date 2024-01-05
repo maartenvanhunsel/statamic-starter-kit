@@ -71,6 +71,7 @@ return [
             'username' => env('BUNNYCDN_SFTP_USERNAME'),
             'password' => env('BUNNYCDN_SFTP_PASS'),
             'passive' => true,
+            'url' => env('BUNNYCDN_HOSTNAME'),
         ],
 
     ],
