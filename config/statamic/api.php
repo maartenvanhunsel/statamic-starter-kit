@@ -78,6 +78,11 @@ return [
 
     'cache' => [
         'expiry' => 60,
+        /**
+         * `true`|`null` = enabled using DefaultCacher, `false` = disabled
+         * @see ApiCacheManager::getDefaultDriver()
+         */
+        'class' => env('STATAMIC_API_CACHE', true),
     ],
 
     /*

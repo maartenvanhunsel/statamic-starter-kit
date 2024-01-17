@@ -66,13 +66,14 @@ return [
         ],
 
         'bunnysftp' => [
-            'driver' => 'sftp',
-            'host' => env('SFTP_HOST', 'storage.bunnycdn.com'),
+            'driver'   => 'sftp',
+            'host'     => env('BUNNYCDN_SFTP_HOST', 'storage.bunnycdn.com'),
             'username' => env('BUNNYCDN_SFTP_USERNAME'),
-            'password' => env('BUNNYCDN_SFTP_PASS'),
-            'passive' => true,
-            'url' => env('BUNNYCDN_HOSTNAME'),
+            'password' => env('BUNNYCDN_SFTP_PASSWORD'),
+            'passive'  => true,
+            'url' => env('BUNNYCDN_URL'),
         ],
+
 
     ],
 
