@@ -20,7 +20,7 @@ return [
     'resources' => [
         'collections' => [
             '*' => [
-                'allowed_filters' => ['uri', 'date'], // Enabled for all collections
+                'allowed_filters' => ['url', 'date'], // Enabled for all collections
             ],
             'pages' => [
                 // 'allowed_filters' => ['title']
