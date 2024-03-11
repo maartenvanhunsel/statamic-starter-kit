@@ -82,7 +82,7 @@ return [
         */
 
         'defaults' => [
-             // 'quality' => 90,
+            // 'quality' => 50,
         ],
 
         /*
@@ -98,7 +98,7 @@ return [
         */
 
         'presets' => [
-             'default' => ['w' => 1600, 'h' => 1600, 'fit' => 'max'],
+             'default' => ['w' => 2000, 'h' => 2000, 'fit' => 'max'],
         ],
 
         /*
@@ -113,6 +113,18 @@ return [
         */
 
         'generate_presets_on_upload' => true,
+
+        /*
+        |--------------------------------------------------------------------------
+        | Append Original Filename
+        |--------------------------------------------------------------------------
+        |
+        | Append the original filename to Glide generated URLs.
+        | This helps with Search Engine Optimization.
+        |
+        */
+
+        'append_original_filename' => true,
 
     ],
 

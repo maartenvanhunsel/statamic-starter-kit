@@ -2,6 +2,7 @@ export_paths:
   - README-template.md
   - .env.example
   - config/app.php
+  - config/auth.php
   - config/cors.php
   - config/filesystems.php
   - config/statamic/api.php
@@ -9,10 +10,17 @@ export_paths:
   - config/statamic/editions.php
   - config/statamic/git.php
   - config/statamic/sites.php
+  - config/statamic/stache.php
+  - routes/api.php
+  - routes/web.php
   - app/Http/Middleware/VerifyCsrfToken.php
   - app/Providers/AppServiceProvider.php
   - app/CustomEntry.php
   - app/CustomAsset.php
+  - config/statamic/cp.php
+  - config/services.php
+  - app/Widgets/TriggerDeploymentWidget.php
+  - resources/views/widgets/trigger-deployment-widget.blade.php
   - resources/blueprints/collections/pages
   - resources/blueprints/globals
   - resources/fieldsets
@@ -24,11 +32,15 @@ export_paths:
   - content/trees/navigation/main.yaml
   - content/assets/assets.yaml
   - config/advanced-seo.php
-  - resources/lang/vendor/advanced-seo
+  - lang/vendor/advanced-seo
   - content/seo
   - config/statamic/redirect.php
+  - config/telescope.php
+  - app/Providers/TelescopeServiceProvider.php
   - vite.config.js
 dependencies:
   aerni/advanced-seo: ^2.4
   league/flysystem-sftp-v3: ^3.22
   rias/statamic-redirect: ^3.4
+dependencies_dev:
+  laravel/telescope: ^4.17

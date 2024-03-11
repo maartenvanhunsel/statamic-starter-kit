@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-namespace App\Providers;
-
 use App\CustomAsset;
 use App\CustomEntry;
 
@@ -16,19 +14,20 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
-     *
-     * @return void
      */
     public function register(): void
     {
-        $this->app->bind(Asset::class,CustomAsset::class);
-        $this->app->bind(Entry::class,CustomEntry::class);
+        if ($this->app->environment('local')) {
+            $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
+            $this->app->register(TelescopeServiceProvider::class);
+        }
+
+        $this->app->bind(Asset::class, CustomAsset::class);
+        $this->app->bind(Entry::class, CustomEntry::class);
     }
 
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
     public function boot(): void
     {

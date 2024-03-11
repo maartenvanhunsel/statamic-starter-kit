@@ -60,7 +60,7 @@ return [
     |
     */
 
-    'dispatch_delay' => env('STATAMIC_GIT_DISPATCH_DELAY', 10),
+    'dispatch_delay' => env('STATAMIC_GIT_DISPATCH_DELAY', 10), // 0
 
     /*
     |--------------------------------------------------------------------------
@@ -149,7 +149,7 @@ return [
     |
     */
 
-    'push' => env('STATAMIC_GIT_PUSH', true),
+    'push' => env('STATAMIC_GIT_PUSH', true), // false
 
     /*
     |--------------------------------------------------------------------------
