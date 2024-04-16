@@ -14,14 +14,14 @@ git submodule init && git submodule update
 ```bash
 cp .env.example .env
 ```
-4. Generate `APP_KEY`
-```bash
-php artisan key:generate
-```
-5. Install dependencies
+4. Install dependencies
 ```bash
 yarn install && yarn build
 composer install
+```
+5. Generate `APP_KEY`
+```bash
+php artisan key:generate
 ```
 6. Create a valet link (optional)
 ```bash
