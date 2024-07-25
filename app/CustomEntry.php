@@ -1,9 +1,7 @@
 <?php
 namespace App;
 
-use Statamic\Entries\Entry;
-
-class CustomEntry extends Entry
+class CustomEntry extends \Ptchr\StatamicBasics\Entry
 {
     public function shallowAugmentedArrayKeys()
     {

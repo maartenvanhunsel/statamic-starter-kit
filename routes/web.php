@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Statamic\Facades\CP\Toast;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,15 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::statamic('example', 'example-view', [
-//    'title' => 'Example'
-// ]);
-Route::get('/', function() {
-    return redirect()->route('statamic.cp.index'); // view('welcome');
-});
+Route::get('', fn()=> redirect()->route('statamic.cp.index'));
 
 Route::middleware(config('statamic.api.middleware'))->post('trigger-vercel-deployment', function() {
     $response = \Http::get(config('services.vercel.deployment-hook-url'));
