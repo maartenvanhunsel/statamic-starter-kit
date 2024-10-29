@@ -8,7 +8,7 @@ Statamic is the flat-first, Laravel + Git powered CMS designed for building beau
 1. `git clone [PROJECT_SSH_URL]`
 2. Init submodules
 ```bash
-git submodule update --init
+git submodule init && git submodule update
 ```
 3. Copy and update `.env` with credentials.
 ```bash

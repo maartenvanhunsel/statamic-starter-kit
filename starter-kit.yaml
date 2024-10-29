@@ -30,12 +30,20 @@ export_paths:
   - content/trees/collections/pages.yaml
   - content/trees/navigation/main.yaml
   - content/assets/assets.yaml
-  - config/advanced-seo.php
-  - lang/vendor/advanced-seo
-  - content/seo
-  - config/statamic/redirect.php
   - vite.config.js
 dependencies:
-  aerni/advanced-seo: ^2.5
   league/flysystem-sftp-v3: ^3.22
-  rias/statamic-redirect: ^3.7
+modules:
+  seo:
+    prompt: false
+    export_paths:
+      - config/advanced-seo.php
+      - lang/vendor/advanced-seo
+      - content/seo
+    dependencies:
+      aerni/advanced-seo: ^2.9
+  redirects:
+    export_paths:
+      - config/statamic/redirect.php
+    dependencies:
+      rias/statamic-redirect: ^3.8
