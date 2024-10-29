@@ -4,7 +4,7 @@ The Statamic cms template makes it super easy to start a new project with a bung
 
 ## How to install
 
-1. `statamic new {project_name} maartenvanhunsel/statamic-starter-kit`
+1. `statamic new {project_name} nobears-den-bosch/statamic-starter-kit`
 2. `cp .env.example .env`
 3. `php artisan key:generate`
 4. `yarn install && yarn build`
