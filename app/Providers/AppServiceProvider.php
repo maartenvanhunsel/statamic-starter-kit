@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use App\CustomAsset;
 use App\CustomEntry;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Statamic\Contracts\Assets\Asset;
 use Statamic\Contracts\Entries\Entry;
@@ -21,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        RateLimiter::for('api', function (Request $request) {
+            return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
+        });
+
         $this->app->bind(Asset::class, CustomAsset::class);
         $this->app->bind(Entry::class, CustomEntry::class);
 

@@ -102,6 +102,7 @@ return [
         resource_path('forms'),
         resource_path('users'),
         resource_path('preferences.yaml'),
+        resource_path('sites.yaml'),
         storage_path('forms'),
         public_path('assets'),
     ],
@@ -132,8 +133,8 @@ return [
     */
 
     'commands' => [
-        'git add {{ paths }}',
-        'git -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }} [BOT]"',
+        '{{ git }} add {{ paths }}',
+        '{{ git }} -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }} [BOT]"',
     ],
 
     /*

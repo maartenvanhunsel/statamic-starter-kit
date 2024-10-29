@@ -1,6 +1,8 @@
 export_paths:
   - README-template.md
   - .env.example
+  - bootstrap/app.php
+  - config/app.php
   - config/auth.php
   - config/cors.php
   - config/filesystems.php
@@ -11,7 +13,6 @@ export_paths:
   - config/statamic/stache.php
   - routes/api.php
   - routes/web.php
-  - app/Http/Middleware/VerifyCsrfToken.php
   - app/Providers/AppServiceProvider.php
   - app/CustomEntry.php
   - app/CustomAsset.php

@@ -36,7 +36,6 @@ return [
         'users' => false,
     ],
 
-
     'route' => env('STATAMIC_API_ROUTE', 'api'),
 
     /*
